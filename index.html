@@ -12,15 +12,21 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<!-- Printing and PDF exports -->
 		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
 		<!--[if lt IE 9]>
@@ -34,9 +40,11 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-
 				<!-- Title Slide -->
 				<section>
+					<a href="#">
+						<img width="350" height="350" data-src="images/Build-Bot2.png">
+					</a>
 					<h2>Setting Up an Environment for PhoneGap Development</h2>
 					<p>
 						<small>Created by <a href="http://github.com/jftoh">Toh Jian Feng</a></small>
@@ -62,63 +70,107 @@
 
 				<!-- Installing Node -->
 				<section>
-					<section data-background="images/nodejs-2560x1440.png">
+					<section>
+						<a href="https://nodejs.org">
+							<img data-src="images/nodejs-dark.png">
+						</a>
 						<h2>Step 1: Install node.js</h2>
+					</section>
+					<section>
 						<p>
-							Download the .exe (Windows) or .dmg (Mac) installer <a href="https://nodejs.org/download/">here</a>.
+							Download the .exe (Windows) or .dmg (Mac) installer <a href="https://nodejs.org/download/">from the node.js downloads page</a>.
+						</p>
+						<p class="fragment">
+							Execute the file to complete the installation.
 						</p>
 					</section>
-					<section data-background="images/nodejs-2560x1440.png">
+					<section>
 						<p>
-							Execute the file to complete the installation.
+							Your terminal (Mac) or command prompt (Windows) should be able to execute <strong><font color="green">npm</font></strong> (node package manager) commands now.
+						</p>
+						<p>
+							Open up your terminal/command prompt and type
+						</p>
+						<pre><code data-trim contenteditable>npm</code></pre>
+						<p>
+							If the feedback given by the terminal/command prompt goes along the lines of
+						</p>
+						<pre><code data-trim contenteditable>Usage: npm &lt;command&gt;</code></pre>
+						<p>
+							it means that node.js has been successfully installed on your computer and you're good to go!
 						</p>
 					</section>
 				</section>
 
 				<!-- Installing PhoneGap -->
 				<section>
-					<section>
-						<h2>Step 2: Installing PhoneGap using the Node Package Manager</h2>
-						<p>
-							Open up your Command Prompt (Windows) or Terminal (Mac).
-						</p>
-					</section>
-					<section>
-						<p>
-							Type in the following command:
-						</p>
-						<p>Windows: </p>
-						<pre><code contenteditable>npm install -g phonegap</code></pre>
-						<p>Mac: </p>
-						<pre><code contenteditable>sudo npm install -g phonegap</code></pre>	
-					</section>
+					<h2>Step 2: Installing PhoneGap using npm</h2>
+					<p>
+						In your Terminal/Command Prompt, enter the following:
+					</p>	
+					<p>
+						Windows:
+					</p>
+					<pre><code data-trim contenteditable>npm install -g phonegap</code></pre>
+					<p>
+						Mac:
+					</p>
+					<pre><code data-trim contenteditable>sudo npm install -g phonegap</code></pre>
 				</section>
+
+				<!-- Installing the Android SDK -->
+				<section>
+					<section>
+						<a href="https://www.android.com">
+							<img data-src="images/android-logo-transparent-bg.png">
+						</a>
+						<h2>Step 3: Installing the Android Software Development Kit (SDK)</h2>
+					</section>
+					<section>
+						<p>
+							PhoneGap allows you to create cross-platform applications using HTML/CSS/JavaScript.
+						</p>
+						<p class="fragment">
+							For simplicity's sake, this guide will use the <font color="green">Android</font> development path so as to accomodate all computers of different operating systems.
+						</p>
+					</section>
+					<section>
+						<p>
+							Download the <strong>Stand-Alone SDK Tools</strong> from the <a href="https://developer.android.com/sdk/installing/index.html">Android Developer Website</a>.
+						</p>
+					</section>
+
+				</section>
+
+
+
 			</div>
+
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+		<script src="js/reveal.js"></script>
 
 		<script>
 
-			// Full list of configuration options available here:
+			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: true,
 				progress: true,
 				history: true,
+				center: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				// Optional libraries used to extend on reveal.js
+				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
 
