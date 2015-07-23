@@ -91,11 +91,11 @@
 						<p>
 							Open up your terminal/command prompt and type
 						</p>
-						<pre><code data-trim contenteditable>npm</code></pre>
+						<pre><code data-trim>npm</code></pre>
 						<p>
 							If the feedback given by the terminal/command prompt goes along the lines of
 						</p>
-						<pre><code data-trim contenteditable>Usage: npm &lt;command&gt;</code></pre>
+						<pre><code data-trim>Usage: npm &lt;command&gt;</code></pre>
 						<p>
 							it means that node.js has been successfully installed on your computer and you're good to go!
 						</p>
@@ -111,11 +111,11 @@
 					<p>
 						Windows:
 					</p>
-					<pre><code data-trim contenteditable>npm install -g phonegap</code></pre>
+					<pre><code data-trim>npm install -g phonegap</code></pre>
 					<p>
 						Mac:
 					</p>
-					<pre><code data-trim contenteditable>sudo npm install -g phonegap</code></pre>
+					<pre><code data-trim>sudo npm install -g phonegap</code></pre>
 				</section>
 
 				<!-- Installing the Java JDK -->
@@ -135,7 +135,7 @@
 						</p>
 						<div class="fragment">
 							<p>For <strong>Mac</strong> users, you can locate you SDK by typing</p>
-							<pre><code data-trim contenteditable>/usr/libexec/java_home -v 1.8</code></pre>
+							<pre><code data-trim>/usr/libexec/java_home -v 1.8</code></pre>
 						</div>
 						<p class="fragment">
 							For <strong>Windows</strong> users, you should have known your installation location during the installation process.
@@ -190,21 +190,78 @@
 
 						<div class="fragment">
 							<p>For Windows: </p>
-							<pre><code data-trim contenteditable>set ANDROID_HOME=&lt;full installation path&gt;</code></pre>
-							<pre><code data-trime contenteditable>set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools</code></pre>
+							<pre><code data-trim>set ANDROID_HOME=&lt;full installation path&gt;</code></pre>
+							<pre><code data-trim>set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools</code></pre>
 						</div>
 						<div class="fragment">
 							<p>For Mac: </p>
-							<pre><code data-trim contenteditable>export ANDROID_HOME=&lt;full installation path&gt;</code></pre>
-							<pre><code data-trime contenteditable>export PATH=${PATH};$ANDROID_HOME/tools;$ANDROID_HOME%/platform-tools</code></pre>
+							<pre><code data-trim>export ANDROID_HOME=&lt;full installation path&gt;</code></pre>
+							<pre><code>export PATH=${PATH};$ANDROID_HOME/tools;$ANDROID_HOME/platform-tools;$ANDROID_HOME/build-tools</code></pre>
 						</div>
+					</section>
+					<section>
+						<h3>Installing the SDK Packages</h3>
+						<div class="fragment fade-out">
+							<p>Open up the SDK Manager by typing</p>
+							<pre><code>android</code></pre>
+							<p>on a <strong>Mac</strong>.</p>
+						</div>
+						<p class="fragment">For <strong>Windows</strong> users, navigate to the folder that you have installed the android SDK in and click on <strong>SDK Manager.exe</strong></p>
+					</section>
+					<section>
+						<p>The user interface of the SDK Manager should appear on your screen.</p>
+						<img data-src="android-sdk-manager.png"> 			
+					</section>
+					<section>
+						<p>Select the latest version of Android Build Tools (current ver. 22.0.1) and the entire folder of Android 5.1.1 (API 22).</p>
+						<p class="fragment">Click on "Install packages..." to install the required components to your computer.</p>
+						<p class="fragment">Wait for the packages to finish installing. This <em>will</em> take some time.</p>
 					</section>
 				</section>
 
+				<!-- Setting Up an Android Device -->
+				<section>
+					<section>
+						<h2>Setting Up an Android Device for App Testing</h2>
+					</section>
+					<section>
+						<p>
+							There are two ways to test your apps.
+							<ol>
+								<li class="fragment">Using an actual Android Phone</li>
+								<li class="fragment">Using an Android Device Simulator on your computer</li>
+							</ol>
+						</p>
+					</section>
+					<section>
+						<h3>Using an Android Phone</h3>
+						<p>Enable developer settings on your phone by doing the following:</p>
+						<ol>
+							<li class="fragment">Access the section "About Phone" under the settings menu of your phone.</li>
+							<li class="fragment">Scroll to the line labelled "Build Number".</li>
+							<li class="fragment">Tap it <strong><em>seven</em></strong> times to unlock developer options.</li>
+						</ol>
+					</section>
+					<section>
+						<h3>Using an Android Phone</h3>
+						<p>Navigate to the section "Developer Options" in the settings menu of your phone.</p>
+						<p class="fragment">Enable the option "USB Debugging".</p>
+					</section>
+					<section>
+						<p>Connect your Android phone to your computer.</p>
+						<p class="fragment">Tap on "trust" if a prompt appears on your phone asking you if you want the phone to allow connections from your computer.</p>
+						<p class="fragment">Your phone is now recognized as an Android device for app testing.</p>
+					</section>
+				</section>
 
+				<!-- Setting Up an Android Emulator -->
+				<section>
+					<section>
+						
+					</section>
 
+				</section>
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
