@@ -3,6 +3,7 @@
 ##########
 
 Gruntfile.js
+package.json
 bower.json
 node_modules/*
 .DS_Store
