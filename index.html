@@ -127,7 +127,25 @@
 						<h2>Step 3: Installing the Java Development Kit (JDK)</h2>
 					</section>
 					<section>
-						
+						<p>
+							Download the <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java JDK (Java Development Kit)</a> from the Java Downloads site and follow the instructions on the installer.
+						</p>
+						<p class="fragment">
+							Do take note of where the JDK is installed.
+						</p>
+						<div class="fragment">
+							<p>For <strong>Mac</strong> users, you can locate you SDK by typing</p>
+							<pre><code data-trim contenteditable>/usr/libexec/java_home -v 1.8</code></pre>
+						</div>
+						<p class="fragment">
+							For <strong>Windows</strong> users, you should have known your installation location during the installation process.
+						</p>	
+					</section>
+					<section>
+						<h3></h3>
+					</section>
+					<section>
+
 					</section>
 				</section>
 
@@ -147,9 +165,7 @@
 							For simplicity's sake, this guide will use the <font color="green">Android</font> development path so as to accomodate all computers of different operating systems.
 						</p>
 					</section>
-					<section>
-						Install the <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java JDK (Java Development Kit)</a> if you haven't already done so.
-					</section>
+
 					<section>
 						<p>
 							Download the <strong>Stand-Alone SDK Tools</strong> from the <a href="https://developer.android.com/sdk/index.html#Other">Android Developer Website</a>.
@@ -164,6 +180,23 @@
 							<p><strong>For Mac:</strong></p>
 							<p>Move the downloaded folder to a location of your liking.</p>
 							<p class="fragment">Note down the file path; we will need this for later.</p>
+						</div>
+					</section>
+					<section>
+						<h3>Setting the ANDROID_HOME Environment Variable</h3>
+						<p>
+							the <strong>ANDROID_HOME</strong> Environment Variable needs to be configured in order to execute android commands in the Command Prompt/Terminal.
+						</p>
+
+						<div class="fragment">
+							<p>For Windows: </p>
+							<pre><code data-trim contenteditable>set ANDROID_HOME=&lt;full installation path&gt;</code></pre>
+							<pre><code data-trime contenteditable>set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools</code></pre>
+						</div>
+						<div class="fragment">
+							<p>For Mac: </p>
+							<pre><code data-trim contenteditable>export ANDROID_HOME=&lt;full installation path&gt;</code></pre>
+							<pre><code data-trime contenteditable>export PATH=${PATH};$ANDROID_HOME/tools;$ANDROID_HOME%/platform-tools</code></pre>
 						</div>
 					</section>
 				</section>
