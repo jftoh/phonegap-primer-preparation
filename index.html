@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Setting Up an Environment for PhoneGap Development</title>
+		<title>PhoneGap Tutorial</title>
 
 		<meta name="description" content="Step-by-step instructions on how to set up your computer for PhoneGap Development">
 		<meta name="author" content="Toh Jian Feng">
@@ -42,10 +42,9 @@
 			<div class="slides">
 				<!-- Title Slide -->
 				<section>
-					<a href="#">
-						<img width="350" height="350" data-src="images/Build-Bot2.png">
-					</a>
-					<h2>Setting Up an Environment for PhoneGap Development</h2>
+					<img width="350" height="350" data-src="images/phonegap-logo-big.png" style="background-color:white;">
+					<h2>PhoneGap Tutorial</h2>
+					<h3>Setting Up Your Computer for PhoneGap Development</h3>
 					<p>
 						<small>Created by <a href="http://github.com/jftoh">Toh Jian Feng</a></small>
 					</p>
@@ -68,54 +67,146 @@
 					</p>
 				</section>
 
-				<!-- Installing Node -->
+				<!-- What You'll Need -->
 				<section>
 					<section>
-						<a href="https://nodejs.org">
-							<img data-src="images/nodejs-dark.png">
+						<h2>What You'll Need</h2>
+					</section>
+
+					<section>
+						<h2>Command Line Interface (CLI)</h2>
+						<img data-src="images/cmd-mac.png"/>
+						<p class="fragment">You'll learn to love it.</p>
+					</section>
+
+					<section>
+						<a href="https://nodejs.org/download/">
+							<img data-src="images/nodejs-dark.png"/>
 						</a>
-						<h2>Step 1: Install node.js</h2>
+						<p class="fragment">You'll need it to download PhoneGap, which is in a Node Package Manager (npm) library format.</p>
 					</section>
+
 					<section>
-						<p>
-							Download the .exe (Windows) or .dmg (Mac) installer <a href="https://nodejs.org/download/">from the node.js downloads page</a>.
-						</p>
-						<p class="fragment">
-							Execute the file to complete the installation.
-						</p>
+						<a href="https://git-scm.com/downloads">
+							<img data-src="images/git-logo.png" style="background-color:white;"/>
+						</a>
+						<p class="fragment">You'll won't be needing it, but your CLI will.</p>
 					</section>
+
 					<section>
-						<p>
-							Your terminal (Mac) or command prompt (Windows) should be able to execute <strong><font color="green">npm</font></strong> (node package manager) commands now.
-						</p>
-						<p>
-							Open up your terminal/command prompt and type
-						</p>
-						<pre><code data-trim>npm</code></pre>
-						<p>
-							If the feedback given by the terminal/command prompt goes along the lines of
-						</p>
-						<pre><code data-trim>Usage: npm &lt;command&gt;</code></pre>
-						<p>
-							it means that node.js has been successfully installed on your computer and you're good to go!
-						</p>
+						<h2>A smartphone</h2>
+						<div class="fragment">
+							<img data-src="images/phonegap-logo-big.png" style="background-color:white;"/>
+							<p>for obvious reasons.</p>
+						</div>
+						<p class="fragment">It's not compulsory, but good to have.</p>	
 					</section>
 				</section>
 
 				<!-- Installing PhoneGap -->
 				<section>
-					<h2>Step 2: Installing PhoneGap using npm</h2>
-					<p>
-						In your Terminal/Command Prompt, enter the following:
-					</p>	
-					<p>
-						Windows:
-					</p>
-					<pre><code data-trim>npm install -g phonegap</code></pre>
-					<p>
-						Mac:
-					</p>
-					<pre><code data-trim>sudo npm install -g phonegap</code></pre>
+					<section>
+						<h2>Installing PhoneGap using npm</h2>
+					</section>
+					
+					<section>
+						<p>In your Terminal/Command Prompt, enter the following:</p>	
+						
+						<img data-src="images/wp-logo.png" width="64" height="64" style="background-color:white;"/>
+						<pre><code data-trim>npm install -g phonegap</code></pre>
+						
+						<img data-src="images/apple-logo.png" width="64" height="64" style="background-color:white;"/>
+						<pre><code data-trim>sudo npm install -g phonegap</code></pre>
+					</section>
+
+					<section>
+						<p>Wait for the packages to be downloaded. It may take a while.</p>
+						<img data-src="images/phonegap-installation-terminal.png">
+					</section>
+
+					<section>
+						<p>You should be able to execute PhoneGap commands after that!</p>
+						<img data-src="images/phonegap-usage.png">
+					</section>
+				</section>
+
+				<!-- Creating a PhoneGap Application -->
+				<section>
+					<section>
+						<h2>Creating a PhoneGap Application</h2>
+					</section>
+
+					<section>
+						<p>Navigate to a folder of your liking.</p>
+						<div class="fragment">
+							<p>Type in the following:</p>
+							<pre><code style="word-wrap: break-word;">phonegap create &lt;app name&gt; &lt;domain-style identifier&gt; &lt;app display title&gt;</code></pre>
+						</div>
+					</section>
+				</section>
+
+				<!-- Installing the PhoneGap Developer App -->
+				<section>
+					<section>
+						<h2>Testing a PhoneGap Application</h2>
+						<small>(The Easy Way Out)</small>
+					</section>
+
+					<section>
+						<p>Download the PhoneGap Developer app.</p>
+						<div class="fragment">
+							<a href="https://itunes.apple.com/app/id843536693">
+								<img data-src="images/apple-app-store.png" width="256" height="256" style="background-color:white;"/>
+							</a>
+							<a href="https://play.google.com/store/apps/details?id=com.adobe.phonegap.app">
+								<img data-src="images/google-play-logo.png" width="256" height="256" style="background-color:white;"/>
+							</a>
+							<a href="https://www.microsoft.com/en-us/store/apps/phonegap-developer/9wzdncrdfsj0">
+								<img data-src="images/windows-store-logo.png" width="256" height="256" style="background-color:white;"/>
+							</a>
+						</div>
+					</section>
+
+					<section>
+						<p>Navigate to the folder of your created app.</p>
+						<pre><code>cd &lt;something something folder location&gt;</code></pre>
+						<div class="fragment">
+							<p>Start the server.</p>
+							<pre><code>phonegap serve</code></pre>
+						</div>
+						<p class="fragment">Take note of the network address that appears on the command line.</p>
+					</section>
+
+					<section>
+						<p>Start the PhoneGap Developer App on your phone.</p>
+						<img data-src="images/phonegap-dev-app-startup.png"/>
+						<p class="fragment">Enter the network address that you have noted down just now.</p>
+					</section>
+
+					<section>
+						<p>You should see this!</p>
+						<img data-src="images/phonegap-dev-app-dl.png"/>
+						<img data-src="images/phonegap-dev-app-finish.png"/>
+					</section>
+
+					<section>
+						<p>Live updating FTW.</p>
+						<p class="fragment">Navigate to the folder labeled <strong><em>"www"</em></strong>. <br> Open up <strong><em>index.html</em></strong>.</p>
+						<p class="fragment">Try editing the the text within the h1 brackets and save the file.</p>
+						<p class="fragment">Look at your phone.</p>
+					</section>
+				</section>
+
+				<!-- Testing out an Application (The Hard Way)-->
+				<section>
+					<section>
+						<h2>Testing a PhoneGap Application</h2>
+						<small>(The Hard Way)</small>
+					</section>
+
+					<section>
+						
+					</section>
 				</section>
 
 				<!-- Installing the Java JDK -->
