@@ -197,7 +197,7 @@
 					</section>
 				</section>
 
-				<!-- Testing out an Application (The Hard Way)-->
+				<!-- Android Emulation (not explained) -->
 				<section>
 					<section>
 						<h2>Testing a PhoneGap Application</h2>
@@ -205,174 +205,66 @@
 					</section>
 
 					<section>
+						<h2>What You'll Need</h2>
+					</section>
+
+					<section>
+						<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">
+							<img data-src="images/java-logo.jpg"/>
+						</a>
+					</section>
+
+					<section>
+						<a href="https://developer.android.com/sdk/index.html#Other">
+							<img data-src="images/android-logo-transparent-bg.png" style="background-color:white;"/>
+						</a>
+					</section>
+
+					<section>
+						<img data-src="images/yao-bitch-pls.jpg">
+					</section>
+				</section>
+
+				<!-- Google Chrome Dev Tools -->
+				<section>
+					<section>
+						<h2>Testing a PhoneGap Application</h2>
+						<small>(For the Extremely Lazy)</small>
+					</section>
+
+					<section>
+						<h2>What You'll Need</h2>
+					</section>
+
+					<section>
+						<a href="https://www.google.com.sg/chrome/browser/desktop/index.html">
+							<img data-src="images/chrome-logo.jpg"/>
+						</a>
+						<p class="fragment">Yup, that's all you need.</p>
+					</section>
+
+					<section>
+						<p>Open up your app's <strong><em>index.html</em></strong>.</p>
+						<p class="fragment">Access the Developer Tools by <strong><em>View > Developer > Developer Tools</em></strong>.</p>
+						<img class="fragment" data-src="images/chrome-dev-mode.png"/>
+					</section>	
+
+					<section>
+						<p>Press the following key combination on your computer:</p>
+						<img data-src="images/wp-logo.png" width="64" height="64" style="background-color:white;"/>
+						<p><strong><em>Control + Shift + m</em></strong></p>
 						
-					</section>
-				</section>
-
-				<!-- Installing the Java JDK -->
-				<section>
-					<section>
-						<a href="https://java.com/en/">
-							<img data-src="images/java-logo.jpg">
-						</a>
-						<h2>Step 3: Installing the Java Development Kit (JDK)</h2>
-					</section>
-					<section>
-						<p>
-							Download the <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java JDK (Java Development Kit)</a> from the Java Downloads site and follow the instructions on the installer.
-						</p>
-						<p class="fragment">
-							Do take note of where the JDK is installed.
-						</p>
-						<div class="fragment">
-							<p>For <strong>Mac</strong> users, you can locate you SDK by typing</p>
-							<pre><code data-trim>/usr/libexec/java_home -v 1.8</code></pre>
-						</div>
-						<p class="fragment">
-							For <strong>Windows</strong> users, you should have known your installation location during the installation process.
-						</p>	
-					</section>
-					<section>
-						<h3></h3>
-					</section>
-					<section>
-
-					</section>
-				</section>
-
-				<!-- Installing the Android SDK -->
-				<section>
-					<section>
-						<a href="https://www.android.com">
-							<img data-src="images/android-logo-transparent-bg.png">
-						</a>
-						<h2>Step 3: Installing the Android Software Development Kit (SDK)</h2>
-					</section>
-					<section>
-						<p>
-							PhoneGap allows you to create cross-platform applications using HTML/CSS/JavaScript.
-						</p>
-						<p class="fragment">
-							For simplicity's sake, this guide will use the <font color="green">Android</font> development path so as to accomodate all computers of different operating systems.
-						</p>
+						<img data-src="images/apple-logo.png" width="64" height="64" style="background-color:white;"/>
+						<p><strong><em>Command + Shift + m</em></strong></p>
 					</section>
 
 					<section>
-						<p>
-							Download the <strong>Stand-Alone SDK Tools</strong> from the <a href="https://developer.android.com/sdk/index.html#Other">Android Developer Website</a>.
-						</p>
-					</section>
-					<section>
-						<div class="fragment fade-out">
-							<p><strong>For Windows:</strong></p>
-							<p>Run the .exe file and follow the instructions on-screen.</p>
-						</div>
-						<div class="fragment">
-							<p><strong>For Mac:</strong></p>
-							<p>Move the downloaded folder to a location of your liking.</p>
-							<p class="fragment">Note down the file path; we will need this for later.</p>
-						</div>
-					</section>
-					<section>
-						<h3>Setting the ANDROID_HOME Environment Variable</h3>
-						<p>
-							the <strong>ANDROID_HOME</strong> Environment Variable needs to be configured in order to execute android commands in the Command Prompt/Terminal.
-						</p>
-
-						<div class="fragment">
-							<p>For Windows: </p>
-							<pre><code data-trim>set ANDROID_HOME=&lt;full installation path&gt;</code></pre>
-							<pre><code data-trim>set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools</code></pre>
-						</div>
-						<div class="fragment">
-							<p>For Mac: </p>
-							<pre><code data-trim>export ANDROID_HOME=&lt;full installation path&gt;</code></pre>
-							<pre><code>export PATH=${PATH};$ANDROID_HOME/tools;$ANDROID_HOME/platform-tools;$ANDROID_HOME/build-tools</code></pre>
-						</div>
-					</section>
-					<section>
-						<h3>Installing the SDK Packages</h3>
-						<div class="fragment fade-out">
-							<p>Open up the SDK Manager by typing</p>
-							<pre><code>android</code></pre>
-							<p>on a <strong>Mac</strong>.</p>
-						</div>
-						<p class="fragment">For <strong>Windows</strong> users, navigate to the folder that you have installed the android SDK in and click on <strong>SDK Manager.exe</strong></p>
-					</section>
-					<section>
-						<p>The user interface of the SDK Manager should appear on your screen.</p>
-						<img data-src="images/android-sdk-manager.png"> 			
-					</section>
-					<section>
-						<p>Select the latest version of Android Build Tools (current ver. 22.0.1) and the entire folder of Android 5.1.1 (API 22).</p>
-						<p class="fragment">Click on "Install packages..." to install the required components to your computer.</p>
-						<p class="fragment">Wait for the packages to finish installing. This <em>will</em> take some time.</p>
-					</section>
-				</section>
-
-				<!-- Setting Up an Android Device -->
-				<section>
-					<section>
-						<h2>Setting Up an Android Device for App Testing</h2>
-					</section>
-					<section>
-						<p>
-							There are two ways to test your apps.
-							<ol>
-								<li class="fragment">Using an actual Android Phone</li>
-								<li class="fragment">Using an Android Device Simulator on your computer</li>
-							</ol>
-						</p>
-					</section>
-					<section>
-						<h3>Using an Android Phone</h3>
-						<p>Enable developer settings on your phone by doing the following:</p>
-						<ol>
-							<li class="fragment">Access the section "About Phone" under the settings menu of your phone.</li>
-							<li class="fragment">Scroll to the line labelled "Build Number".</li>
-							<li class="fragment">Tap it <strong><em>seven</em></strong> times to unlock developer options.</li>
-						</ol>
-					</section>
-					<section>
-						<h3>Using an Android Phone</h3>
-						<p>Navigate to the section "Developer Options" in the settings menu of your phone.</p>
-						<p class="fragment">Enable the option "USB Debugging".</p>
-					</section>
-					<section>
-						<p>Connect your Android phone to your computer.</p>
-						<p class="fragment">Tap on "trust" if a prompt appears on your phone asking you if you want the phone to allow connections from your computer.</p>
-						<p class="fragment">Your phone is now recognized as an Android device for app testing.</p>
-					</section>
-				</section>
-
-				<!-- Setting Up an Android Emulator -->
-				<section>
-					<section>
-						<h2>Setting Up an Android Emulator</h2>
-					</section>
-					<section>
-						<p class="fragment">Sometimes you or your team may not have an Android phone with you.</p>
-						<p class="fragment">That's totally fine, since we still have other phone operating systems (iOS, Windows Phone 8.1, and so on...) that we can work with.</p>
-						<p class="fragment">Let's just assume, in this case, your targeted operating system is confined to <strong><font color="green">Android</font></strong>.</p>
-					</section>
-					<section>
-						<p>Let's open up the Android Virtual Device (AVD) Manager by doing the following:</p>
-						<div class="fragment fade-out">
-							<p><strong>Mac</strong>: type the following command in your Terminal:</p>
-							<pre><code>android avd</code></pre>
-						</div>
-						<div class="fragment">
-							<p><strong>Windows</strong>: Navigate to the Android SDK folder and run <strong>AVD Manager.exe</strong>.</p>
-						</div>	
-					</section>
-					<section>
-						<p>You should see something like this: </p>
-						<img data-src="images/android-avd.png">
-					</section>
-					<section>
-						<p>From the menu, select "<strong>Create...</strong>" to start creating a new Android Emulator.</p>
+						<img data-src="images/chrome-dev-mode-mobile.png"/>
 					</section>
 
+					<section>
+						<p>Find out more about device emulating with Google Chrome <a href="https://developer.chrome.com/devtools/docs/device-mode">here</a>.</p>
+					</section>
 				</section>
 			</div>
 		</div>
